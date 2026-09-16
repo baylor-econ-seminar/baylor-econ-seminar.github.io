@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Scheduler...</title>
+    
+    <!-- 1. Fallback meta refresh redirect -->
+    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwGqeIIYz9V9uk86N2tPHaeJySHIbfiAS-Sut2dJUJsZPYLdVVoLg0VxXoPy7Dl3pQ/exec">
+    
+    <!-- 2. JavaScript redirect with URL parameter forwarding -->
+    <script>
+      const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwGqeIIYz9V9uk86N2tPHaeJySHIbfiAS-Sut2dJUJsZPYLdVVoLg0VxXoPy7Dl3pQ/exec";
+      
+      // Preserve parameters (e.g. ?sheet=Ukert) when redirecting
+      const currentParams = window.location.search;
+      window.location.href = APPS_SCRIPT_URL + currentParams;
+    </script>
+  </head>
+  <body>
+    <p>Loading schedule... If you are not redirected automatically, <a id="manualLink" href="https://script.google.com/macros/s/AKfycbwGqeIIYz9V9uk86N2tPHaeJySHIbfiAS-Sut2dJUJsZPYLdVVoLg0VxXoPy7Dl3pQ/exec">click here</a>.</p>
+    <script>
+      document.getElementById('manualLink').href = APPS_SCRIPT_URL + window.location.search;
+    </script>
+  </body>
+</html>
