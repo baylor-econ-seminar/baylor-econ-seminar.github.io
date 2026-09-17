@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to Scheduler...</title>
-    
-    <!-- 1. Fallback meta refresh redirect -->
-    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwGqeIIYz9V9uk86N2tPHaeJySHIbfiAS-Sut2dJUJsZPYLdVVoLg0VxXoPy7Dl3pQ/exec">
-    
-    <!-- 2. JavaScript redirect with URL parameter forwarding -->
+    <title>Redirecting...</title>
     <script>
-      const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwGqeIIYz9V9uk86N2tPHaeJySHIbfiAS-Sut2dJUJsZPYLdVVoLg0VxXoPy7Dl3pQ/exec";
-      
-      // Preserve parameters (e.g. ?sheet=Ukert) when redirecting
-      const currentParams = window.location.search;
-      window.location.href = APPS_SCRIPT_URL + currentParams;
+        // Define your Apps Script URL
+        const targetUrl = "https://script.google.com/macros/s/AKfycbzOS19cX3qoywYfQqhRw6-ytml3ywlu6ACVPMLUhGnle8QdlF7yUWW00479VTDhg_rLrw/exec";
+        
+        // Perform the redirect immediately
+        window.location.replace(targetUrl);
     </script>
-  </head>
-  <body>
-    <p>Loading schedule... If you are not redirected automatically, <a id="manualLink" href="https://script.google.com/macros/s/AKfycbwGqeIIYz9V9uk86N2tPHaeJySHIbfiAS-Sut2dJUJsZPYLdVVoLg0VxXoPy7Dl3pQ/exec">click here</a>.</p>
-    <script>
-      document.getElementById('manualLink').href = APPS_SCRIPT_URL + window.location.search;
-    </script>
-  </body>
+</head>
+<body>
+    <p>Redirecting to application...</p>
+</body>
 </html>
