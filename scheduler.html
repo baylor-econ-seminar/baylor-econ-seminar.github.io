@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
-        // Define your Apps Script URL
+        // Your Apps Script URL (unchanged)
         const targetUrl = "https://script.google.com/macros/s/AKfycbxQ1J6iuAYUSuEftn1w1zuhsIZ7_ACN7Py8DZFCNLsdf2DMBfFALXmE10dtx8v_UHIJ4A/exec";
         
-        // Perform the redirect immediately
-        window.location.replace(targetUrl);
+        // This dynamically grabs any extra parameters (?sheet=..., etc.)
+        // attached to the current (friendly) URL.
+        const currentParams = window.location.search;
+
+        // Perform the redirect immediately, passing the params.
+        window.location.replace(targetUrl + currentParams);
     </script>
 </head>
 <body>
